@@ -41,12 +41,12 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "npm run prettier"
+			"pre-commit": "lint-staged"
 		}
 	},
 	"lint-staged": {
 		"linters": {
-			"src/**/*.{js,ts,tsx,scss,css}": [
+			"src/**/*.{js,jsx,ts,tsx,scss,css}": [
 				"prettier --write",
 				"git add"
 			],
@@ -58,6 +58,12 @@
 				"prettier --write",
 				"git add"
 			]
-		}
+		},
+		"ignore": [
+			"node_modules",
+			"dist",
+			"package-lock.json",
+			"yarn.lock"
+		]
 	}
 }
