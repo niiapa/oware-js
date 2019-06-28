@@ -1,7 +1,4 @@
-A React &amp; Typescript starter template.  
-Bundled with Parcel and formatted with Prettier (with git-add hooks), and SCSS support
-
-Clone the repository to get started.
+Oware-JS by Nii Apa Abbey
 
 # Install dependencies
 ```
