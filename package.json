@@ -33,11 +33,11 @@
 		"typescript": "^3.5.2"
 	},
 	"scripts": {
-		"start": "concurrently \"./node_modules/.bin/tsc --noEmit --watch\" \"./node_modules/.bin/parcel --out-dir build index.html\"",
-		"build": "./node_modules/.bin/parcel --out-dir build build index.html",
+		"start": "concurrently \"tsc --noEmit --watch\" \"parcel --out-dir build index.html\"",
+		"build": "parcel --out-dir build build index.html",
 		"test": "jest",
-		"prettier": "./node_modules/.bin/prettier --write src/**/*.{js,jsx,ts,tsx,scss,css}",
-		"analyze": "./node_modules/.bin/source-map-explorer dist/*"
+		"prettier": "prettier --write src/**/*.{js,jsx,ts,tsx,scss,css}",
+		"analyze": "source-map-explorer dist/*"
 	},
 	"husky": {
 		"hooks": {
@@ -61,7 +61,8 @@
 		},
 		"ignore": [
 			"node_modules",
-			"dist",
+			"build",
+			".cache",
 			"package-lock.json",
 			"yarn.lock"
 		]
