@@ -36,12 +36,12 @@
 		"start": "concurrently \"./node_modules/.bin/tsc --noEmit --watch\" \"./node_modules/.bin/parcel --out-dir build index.html\"",
 		"build": "./node_modules/.bin/parcel --out-dir build build index.html",
 		"test": "jest",
-		"prettier": "./node_modules/.bin/prettier --write src/**/*.{js,ts,tsx,scss,css}",
+		"prettier": "./node_modules/.bin/prettier --write src/**/*.{js,jsx,ts,tsx,scss,css}",
 		"analyze": "./node_modules/.bin/source-map-explorer dist/*"
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "prettier"
+			"pre-commit": "npm run prettier"
 		}
 	},
 	"lint-staged": {
